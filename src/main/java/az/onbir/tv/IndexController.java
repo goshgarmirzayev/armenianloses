@@ -19,7 +19,7 @@ public class IndexController {
         this.manDao = manDao;
     }
 
-    @GetMapping
+    @RequestMapping(value = "/")
     public ModelAndView index(ModelAndView modelAndView) {
         modelAndView.addObject("mans", (List<Man>) manDao.findAll());
         modelAndView.setViewName("index");

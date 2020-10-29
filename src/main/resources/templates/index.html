@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armenian Loses</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<body onload="sound('/img/videoplayback.m4a')">
 <div class="container">
     <div class="row mt-5 mb-5">
         <div class="col col-md-12">
@@ -37,5 +37,19 @@
 
     </div>
 </div>
+<script>
+    function sound(src) {
+        this.sound = document.createElement("audio");
+        this.sound.src = src;
+        this.sound.setAttribute("preload", "auto");
+        this.sound.setAttribute("controls", "none");
+        this.sound.style.display = "none";
+        document.body.appendChild(this.sound);
+
+            this.sound.play();
+
+
+    }
+</script>
 </body>
 </html>
