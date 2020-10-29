@@ -16,7 +16,12 @@
                     <input class="form-control" type="text" name="info" placeholder="f.e ՄԱՐՏԻԿՅԱՆ ԱՌԱՔԵԼ ՄԱՐԱՏԻ">
                 </div>
                 <div class="col col-md-12 col-lg-12 col-sm-12 text-center mt-5">
-                    <input class="btn btn-outline-success btn-block col-md-6 col-lg-6 offset-md-3 offset-lg-3" type="submit" value="Search">
+                    <input class="btn btn-outline-success btn-block col-md-6 col-lg-6 offset-md-3 offset-lg-3"
+                           type="submit" value="Search">
+                </div>
+                <div class="col col-md-12 col-lg-12 col-sm-12 text-center mt-5">
+                   <label th:text="${'Total: '+mans.size()}">
+                   </label>
                 </div>
             </form>
         </div>
@@ -25,7 +30,7 @@
         <div class="col col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <p th:text="${man?.info}"></p>
+                    <p th:text="${man?.id+'.'+man?.info}"></p>
                 </div>
             </div>
         </div>
